@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "67a8defa1173af6532f493c4"
+  },
+  "name": "Joseph",
+  "email": "josephbarth247@gmail.com",
+  "password": "$2b$10$y53I7/nTsUggl4OMIwMErepgcmahjb1T/U6YjTPW6cla9hF0Ujutm",
+  "role": "Admin",
+  "createAt": {
+    "$date": "2025-02-09T16:59:38.657Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-09T16:59:38.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a8defc1173af6532f493c7"
+  },
+  "name": "Rev. Sr. Veronica",
+  "email": "nwaiwuamaka315@gmail.com",
+  "password": "$2b$10$FBzyQxRtK0xtbF8wENaosu73XHzXtI3/i6fmOYPR8qKJJyB9S9w2y",
+  "role": "Admin",
+  "createAt": {
+    "$date": "2025-02-09T16:59:40.887Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-09T16:59:40.887Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67a8defd1173af6532f493c9"
+  },
+  "name": "Rev. Fr. Jimbili Moses",
+  "email": "mjimbili@yahoo.co.uk",
+  "password": "$2b$10$FBzyQxRtK0xtbF8wENaosu73XHzXtI3/i6fmOYPR8qKJJyB9S9w2y",
+  "role": "Admin",
+  "createAt": {
+    "$date": "2025-02-09T16:59:41.029Z"
+  },
+  "updatedAt": {
+    "$date": "2025-02-09T16:59:41.029Z"
+  },
+  "__v": 0
+}]

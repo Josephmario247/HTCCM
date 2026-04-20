@@ -1,0 +1,34 @@
+services:
+
+  frontend:
+    
+    # image from doockerHub
+    image: mario247/htcc-frontend-prod:${IMAGE_TAG:-latest}
+    
+    # image from local service
+    # image: htcc-frontend-dev:1.0.0
+    container_name: htcc-frontend-prod
+
+    ports:
+      - "8080:80"
+    restart: always
+
+
+
+  backend:
+
+    # depends_on:
+    #   - db
+    # image from doockerHub
+    image: mario247/htcc-backend-api-prod:${IMAGE_TAG:-latest}
+
+    # image from local service
+    # image: htcc-backend-api-dev:1.0.0
+    container_name: htcc-backend-api-prod
+
+    ports:
+      - "5000:5000"
+
+    restart: always
+
+   
