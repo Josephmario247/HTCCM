@@ -11,7 +11,9 @@ services:
 
     ports:
       - "8080:80"
-      
+    environment:
+       API_URL: "http://${API_HOST_IP}:5000"
+
     restart: always
 
 
@@ -29,6 +31,12 @@ services:
 
     ports:
       - "5000:5000"
+    environment:
+      DB_CONNXTION_STRING: "${DB_CONNXTION_STRING}"
+      PORT: "${PORT}"
+      JWT_kEY: "${JWT_KEY}"
+      #  VITE_FRONTEND_URL: "${VITE_FRONTEND_URL}"
+      ALLOWED_ORIGINS: "${ALLOWED_ORIGINS}"
 
 
     restart: always
