@@ -9,8 +9,11 @@ services:
     image: htcc-frontend-dev:1.0.0
     container_name: htcc-frontend-dev
 
+
     ports:
       - "5173:5173"
+    environment:
+       API_URL: "http://${API_HOST_IP}:5000"
     build:
       context: ./frontend
       dockerfile: Dockerfile.dev
@@ -43,6 +46,12 @@ services:
 
     ports:
       - "5000:5000"
+    environment:
+       DB_CONNXTION_STRING: "${DB_CONNXTION_STRING}"
+       PORT: "${PORT}"
+       JWT_kEY: "${JWT_KEY}"
+      #  VITE_FRONTEND_URL: "${VITE_FRONTEND_URL}"
+       ALLOWED_ORIGINS: "${ALLOWED_ORIGINS}"
     build:
       context: ./backend
       dockerfile: Dockerfile.dev

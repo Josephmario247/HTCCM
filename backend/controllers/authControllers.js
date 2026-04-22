@@ -1,7 +1,8 @@
 import User from "./../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-
+import dotenv from "dotenv"
+dotenv.config()
 
 const login = async (req, res) => {
   try {
@@ -19,13 +20,13 @@ const login = async (req, res) => {
     const token = jwt.sign(
       { _id: user._id, role: user.role },
       process.env.JWT_KEY,
-      { expiresIn: "1d" }
+      { expiresIn: "1h" }
     );
     return res.status(200).json({
       success: true,
       token,
       user: { _id: user._id, name: user.name, role: user.role },
-      message: `Welcome ${user.name} to Holy Trinity Parish Membership Registration System` 
+      message: `Welcome ${user.name} to Holy Trinity Parish Membership System` 
     });
   } catch (error) {
    return res.status(500).json({ success: false, error: error.message });
