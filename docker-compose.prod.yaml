@@ -34,7 +34,7 @@ services:
     environment:
       DB_CONNXTION_STRING: "${DB_CONNXTION_STRING}"
       PORT: "${PORT}"
-      JWT_kEY: "${JWT_KEY}"
+      JWT_KEY: "${JWT_KEY}"
       #  VITE_FRONTEND_URL: "${VITE_FRONTEND_URL}"
       ALLOWED_ORIGINS: "${ALLOWED_ORIGINS}"
 

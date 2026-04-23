@@ -26,7 +26,7 @@ const login = async (req, res) => {
       success: true,
       token,
       user: { _id: user._id, name: user.name, role: user.role },
-      message: `Welcome ${user.name} to Holy Trinity Parish Membership System` 
+      message: `Welcome ${user.name} to HTP Membership System` 
     });
   } catch (error) {
    return res.status(500).json({ success: false, error: error.message });
