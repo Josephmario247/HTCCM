@@ -26,7 +26,7 @@ const AdminSideBar = () => {
       </div> */}
       <div className="bg-[#41436A] text-white h-12 w-60 pr-20 md:pr-60 fixed flex items-center px-5 justify-between md:w-full z-50">
          <img src={images} alt="HT-img"className=" rounded-full w-10 h-10 ml-0 hidden md:block" />
-        <h3 className="text-xl font-poppins ml-10 px-2 absolute">Holy Trinity</h3>
+        <h3 className="text-xl font-poppins ml-10 px-2 absolute">Holy Trinity Parish</h3>
         <button onClick={toggleSidebar} className="md:hidden absolute">
           <FaBars className="text-2xl" />
         </button>
