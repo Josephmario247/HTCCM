@@ -17,7 +17,8 @@ COPY --from=build /app/dist /usr/share/nginx/html
 COPY public/env.template.js /usr/share/nginx/html/env.template.js
 
 # Replace variables at runtime
-CMD sh -c "envsubst < /usr/share/nginx/html/env.template.js > /usr/share/nginx/html/env.js && nginx -g 'daemon off;'"
+# CMD sh -c "envsubst < /usr/share/nginx/html/env.template.js > /usr/share/nginx/html/env.js && nginx -g 'daemon off;'"
+CMD ["sh", "-c", "envsubst < public/env.template.js > public/env.js && npm run dev -- --host"]
 
 
 # Expose Nginx port
