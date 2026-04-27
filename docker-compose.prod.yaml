@@ -14,8 +14,8 @@ services:
 
 
     restart: always
-    networks:
-      - htccm_net
+    # networks:
+    #   - htccm_net
 
 
 
@@ -36,22 +36,22 @@ services:
       - .env
     restart: always
     
-    networks:
-      - htccm_net
+    # networks:
+    #   - htccm_net
 
-  nginx:
-    image: nginx:latest
-    container_name: nginx
-    restart: always
-    volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
-      - /etc/letsencrypt:/etc/letsencrypt
-    ports:
-      - "80:80"
-      - "443:443"
-    networks:
-      - htccm_net
+#   nginx:
+#     image: nginx:latest
+#     container_name: nginx
+#     restart: always
+#     volumes:
+#       - ./nginx/conf.d:/etc/nginx/conf.d
+#       - /etc/letsencrypt:/etc/letsencrypt
+#     ports:
+#       - "80:80"
+#       - "443:443"
+#     networks:
+#       - htccm_net
 
-networks:
-  htccm_net:
-    driver: bridge   
+# networks:
+#   htccm_net:
+#     driver: bridge   
