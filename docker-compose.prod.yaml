@@ -10,12 +10,12 @@ services:
     container_name: htcc-frontend-prod
 
     ports:
-      - "8080:80"
+      - "3000:80"
 
 
     restart: always
-    networks:
-      - htccm-network
+    # networks:
+    #   - htccm-network
 
 
 
@@ -36,20 +36,20 @@ services:
       - .env
     restart: always
     
-    networks:
-      - htccm-network
+    # networks:
+    #   - htccm-network
 
-  nginx:
-    image: nginx:latest
-    container_name: nginx
-    ports:
-      - "8080:8080"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-    networks:
-      - htccm-network
+#   nginx:
+#     image: nginx:latest
+#     container_name: nginx
+#     ports:
+#       - "8080:8080"
+#     volumes:
+#       - ./nginx.conf:/etc/nginx/nginx.conf:ro
+#     networks:
+#       - htccm-network
 
-networks:
-  htccm-network:
-    driver: bridge
+# networks:
+#   htccm-network:
+#     driver: bridge
   
