@@ -13,8 +13,8 @@ services:
       - "5173:5173"
 
     environment:
-       API_URL: "https://api.htcmaitama.org"
-      # "http://${API_HOST_IP}:5000"
+       API_URL: "http://${API_HOST_IP}:5000"
+      #  "https://api.htcmaitama.org"
 
     depends_on:
       - backend

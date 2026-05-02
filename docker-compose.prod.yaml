@@ -11,10 +11,10 @@ services:
 
     ports:
       - "3000:80"
-    env_file:
-      - .env
-    # environment:
-    #   API_URL: "${API_HOST_IP}"
+    # env_file:
+    #   - .env
+    environment:
+      API_URL: "${API_HOST_IP}"
     restart: always
     # networks:
     #   - htccm-network
